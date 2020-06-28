@@ -1,0 +1,20 @@
+{
+  "name": "academy-device",
+  "version": "1.0.0",
+  "description": "Training project of fixed markup of 'Divice' HTML Academy",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vivendum/academy-device.git"
+  },
+  "homepage": "https://github.com/Vivendum/academy-device#readme",
+  "bugs": {
+    "url": "https://github.com/Vivendum/academy-device/issues"
+  },
+  "author": {
+    "name": "Vivendum",
+    "email": "vivendum@mail.ru",
+    "url": "https://vivendum.github.io/present-myself"
+  },
+  "license": "MIT"
+}
