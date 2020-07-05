@@ -16,5 +16,14 @@
     "email": "vivendum@mail.ru",
     "url": "https://vivendum.github.io/present-myself"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "4.0.x",
+    "gulp-plumber": "1.2.x"
+  },
+  "scripts": {
+    "check": "gulp",
+    "build": "gulp build",
+    "start": "gulp start"
+  }
 }
