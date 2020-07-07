@@ -19,7 +19,8 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "4.0.x",
-    "gulp-plumber": "1.2.x"
+    "gulp-plumber": "1.2.x",
+    "gulp-rigger": "0.5.x"
   },
   "scripts": {
     "check": "gulp",
