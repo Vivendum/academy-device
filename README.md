@@ -1,5 +1,5 @@
 # academy-device
-Training project of fixed markup of the construction company site
+Training project of fixed markup of the gadget store site.
 
 # Личный проект «Девайс»
 [Device](https://youtu.be/HF7pwlS3Y1I) — интернет-магазин гаджетов.
