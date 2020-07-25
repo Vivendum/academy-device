@@ -4,6 +4,8 @@ var server = require("browser-sync").create();
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var rigger = require("gulp-rigger");
+var imagemin = require("gulp-imagemin");
+var pngquant = require("imagemin-pngquant");
 
 gulp.task("build-html", function() {
   return gulp.src("source/template/*.html")
@@ -12,6 +14,32 @@ gulp.task("build-html", function() {
     .pipe(gulp.dest("build/before"))
     .pipe(gulp.dest("build/after"))
     .pipe(server.stream());
+});
+
+gulp.task("image-optimization", function() {
+  return gulp.src("source/image/origin/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.svgo({
+        js2svg: {
+          pretty: true,
+          indent: 2
+        },
+        plugins: [{
+          removeViewBox: false
+          }, {
+          cleanupNumericValues: {
+            floatPrecision: 2
+          }}, {
+          sortAttrs: true
+        }]
+      }),
+      imagemin.mozjpeg({
+        quality: 75,
+        progressive: true
+      }),
+      pngquant()
+    ]))
+    .pipe(gulp.dest("source/image/optimize/"));
 });
 
 gulp.task("server", function () {
