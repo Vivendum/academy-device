@@ -22,6 +22,7 @@
     "gulp": "4.0.x",
     "gulp-plumber": "1.2.x",
     "gulp-rigger": "0.5.x",
+    "gulp-cache": "1.1.x",
     "gulp-imagemin": "7.1.x",
     "imagemin-pngquant": "9.0.x"
   },

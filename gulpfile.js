@@ -4,6 +4,7 @@ var server = require("browser-sync").create();
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var rigger = require("gulp-rigger");
+var cache = require("gulp-cache");
 var imagemin = require("gulp-imagemin");
 var pngquant = require("imagemin-pngquant");
 
@@ -18,7 +19,7 @@ gulp.task("build-html", function() {
 
 gulp.task("image-optimization", function() {
   return gulp.src("source/image/*.{jpg,png,svg}")
-    .pipe(imagemin([
+    .pipe(cache(imagemin([
       imagemin.svgo({
         js2svg: {
           pretty: true,
@@ -39,7 +40,7 @@ gulp.task("image-optimization", function() {
         progressive: true
       }),
       pngquant()
-    ]))
+    ])))
     .pipe(gulp.dest("build/after/image/"));
 });
 
@@ -54,9 +55,10 @@ gulp.task("server", function () {
     browser: "firefox"
   });
 
+  gulp.watch("source/image/*.{jpg,png,svg}", gulp.series("image-optimization"));
   gulp.watch("source/template/**/*.html", gulp.series("build-html"));
   gulp.watch("build/after/*.html").on("change", server.reload);
 });
 
 gulp.task("build", gulp.series("build-html"));
-gulp.task("start", gulp.series("build-html", "server"));
+gulp.task("start", gulp.series("image-optimization", "build-html", "server"));
