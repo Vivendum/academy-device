@@ -17,7 +17,7 @@ gulp.task("build-html", function() {
 });
 
 gulp.task("image-optimization", function() {
-  return gulp.src("source/image/origin/*.{jpg,png,svg}")
+  return gulp.src("source/image/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.svgo({
         js2svg: {
@@ -29,7 +29,8 @@ gulp.task("image-optimization", function() {
           }, {
           cleanupNumericValues: {
             floatPrecision: 2
-          }}, {
+            }
+          }, {
           sortAttrs: true
         }]
       }),
@@ -39,7 +40,7 @@ gulp.task("image-optimization", function() {
       }),
       pngquant()
     ]))
-    .pipe(gulp.dest("source/image/optimize/"));
+    .pipe(gulp.dest("build/after/image/"));
 });
 
 gulp.task("server", function () {
