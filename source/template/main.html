@@ -157,9 +157,28 @@
       <h2 class="contacts__title">Контакты</h2>
       <p class="contacts__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
       <img class="contacts__image map" src="image/map-small.png" width="560" height="222" alt="Местонахождение магазина по адрессу: улица Строителей, дом 15">
-      <a href="#" class="contacts_link button">Напишите нам</a>
+      <a href="#form-communication" class="contacts_link button">Напишите нам</a>
     </section>
   </main>
   //= section/footer-main.html
+  <section class="communication modal" id="form-communication">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <form class="communication__form" method="post" action="https://echo.htmlacademy.ru">
+      <p class="communication__wrapper">
+        <label class="communication__label" for="name">Ваше имя:</label>
+        <input class="communication__input" id="name" type="text" name="name" placeholder="Имя Фамилия" required>
+      </p>
+      <p class="communication__wrapper">
+        <label class="communication__label" for="email">Ваш <span lang="en">e-mail<span>:</label>
+        <input class="communication__input" id="email" type="email" name="email" placeholder="email@example.com" required>
+      </p>
+      <p class="communication__wrapper">
+        <label class="communication__label" for="letter">Текст письма:</label>
+        <textarea class="communication__input" id="letter" name="letter" placeholder="В свободной форме"></textarea>
+      </p>
+      <input class="communication__button button" type="submit" value="Отправить">
+      <button class="communication__button-close button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </form>
+  </section>
 </body>
 </html>
