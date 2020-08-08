@@ -19,6 +19,29 @@
         <a class="breadcrumbs__link breadcrumbs__link--current" title="Вы здесь">Моноподы для селфи</a>
       </li>
     </ul>
+    <section class="page__filter filter">
+      <h2 class="filter__title title-picking">Фильтр:</h2>
+      <form class="filter__form" method="post" action="https://echo.htmlacademy.ru" oninput="show_price_min.value=price_min.value; show_price_max.value=price_max.value">
+        <fieldset class="filter__group filter-price">
+          <legend class="filter-price__subtitle subtitle-picking">Стоимость</legend>
+          <label class="visually-hidden" for="price-min">Минимальная цена</label>
+          <input class="visually-hidden" id="price-min" type="number" name="price_min" min="0" max="10000" step="100" value="0">
+          <label class="visually-hidden" for="price-max">Максимальная цена</label>
+          <input class="visually-hidden" id="price-max" type="number" name="price_max" min="0" max="10000" step="100" value="5000">
+          <div class="filter-price__range range">
+            <div class="range__scale">
+              <div class="range__band">
+                <div class="range__toggle range__toggle-min"></div>
+                <div class="range__toggle range__toggle-max"></div>
+              </div>
+            </div>
+          </div>
+          <span class="filter-price__show-price">от <output for="price-min" name="show_price_min">0</output></span>
+          <span class="filter-price__show-price">до <output for="price-max" name="show_price_max">5000</output></span>
+        </fieldset>
+        <input type="submit" value="Показать">
+      </form>
+    </section>
     <ul class="products">
       <li class="products__item">
         <h2 class="products__title">Любительская селфи-палка</h2>
