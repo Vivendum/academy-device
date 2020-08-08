@@ -21,7 +21,7 @@
     </ul>
     <section class="page__filter filter">
       <h2 class="filter__title title-picking">Фильтр:</h2>
-      <form class="filter__form" method="post" action="https://echo.htmlacademy.ru" oninput="show_price_min.value=price_min.value; show_price_max.value=price_max.value">
+      <form class="filter__form" name="filter" method="post" action="https://echo.htmlacademy.ru" oninput="show_price_min.value=price_min.value; show_price_max.value=price_max.value">
         <fieldset class="filter__group filter-price">
           <legend class="filter-price__subtitle subtitle-picking">Стоимость</legend>
           <label class="visually-hidden" for="price-min">Минимальная цена</label>
@@ -78,7 +78,7 @@
     </section>
     <section class="page__sorting sorting">
       <h2 class="sorting__title title-picking">Сортировка:</h2>
-      <form class="sorting__form">
+      <form class="sorting__form" name="sorting">
         <fieldset class="sorting__group">
           <legend class="visually-hidden">Группирование</legend>
           <label class="sorting__label">
