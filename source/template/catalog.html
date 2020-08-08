@@ -76,6 +76,37 @@
         <input class="filter__button button" type="submit" value="Показать">
       </form>
     </section>
+    <section class="page__sorting sorting">
+      <h2 class="sorting__title title-picking">Сортировка:</h2>
+      <form class="sorting__form">
+        <fieldset class="sorting__group">
+          <legend class="visually-hidden">Группирование</legend>
+          <label class="sorting__label">
+            <input class="sorting__input" type="radio" name="grouping" value="price" checked>
+            По цене
+          </label>
+          <label class="sorting__label">
+            <input class="sorting__input" type="radio" name="grouping" value="type">
+            По типу
+          </label>
+          <label class="sorting__label">
+            <input class="sorting__input" type="radio" name="grouping" value="popularity">
+            По популярности
+          </label>
+        </fieldset>
+        <fieldset class="sorting__group">
+          <legend class="visually-hidden">Упорядочивание</legend>
+          <label class="sorting__label">
+            <input class="sorting__input" type="radio" name="regulation" value="ascending">
+            По возрастанию
+          </label>
+          <label class="sorting__label">
+            <input class="sorting__input" type="radio" name="regulation" value="descending" checked>
+            По убыванию
+          </label>
+        </fieldset>
+      </form>
+    </section>
     <ul class="products">
       <li class="products__item">
         <h2 class="products__title">Любительская селфи-палка</h2>
