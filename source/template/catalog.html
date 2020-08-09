@@ -78,34 +78,25 @@
     </section>
     <section class="page__sorting sorting">
       <h2 class="sorting__title title-picking">Сортировка:</h2>
-      <form class="sorting__form" name="sorting">
-        <fieldset class="sorting__group">
-          <legend class="visually-hidden">Группирование</legend>
-          <label class="sorting__label">
-            <input class="sorting__input" type="radio" name="grouping" value="price" checked>
-            По цене
-          </label>
-          <label class="sorting__label">
-            <input class="sorting__input" type="radio" name="grouping" value="type">
-            По типу
-          </label>
-          <label class="sorting__label">
-            <input class="sorting__input" type="radio" name="grouping" value="popularity">
-            По популярности
-          </label>
-        </fieldset>
-        <fieldset class="sorting__group">
-          <legend class="visually-hidden">Упорядочивание</legend>
-          <label class="sorting__label">
-            <input class="sorting__input" type="radio" name="regulation" value="ascending">
-            По возрастанию
-          </label>
-          <label class="sorting__label">
-            <input class="sorting__input" type="radio" name="regulation" value="descending" checked>
-            По убыванию
-          </label>
-        </fieldset>
-      </form>
+      <ul class="sorting__list" aria-label="Группирование">
+        <li class="sorting__item">
+          <a class="sortion__link sortion__link--current" title="Выбрано">По цене</a>
+        </li>
+        <li class="sorting__item">
+          <a class="sortion__link" href="#">По типу</a>
+        </li>
+        <li class="sorting__item">
+          <a class="sortion__link" href="#">По популярности</a>
+        </li>
+      </ul>
+      <ul class="sorting__list" aria-label="Упорядочивание">
+        <li class="sorting__item">
+          <a class="sortion__link" href="#">По возрастанию</a>
+        </li>
+        <li class="sorting__item">
+          <a class="sortion__link sortion__link--current" title="Выбрано">По убыванию</a>
+        </li>
+      </ul>
     </section>
     <section class="page__products products">
       <h2 class="visually-hidden">Список товаров</h2>
