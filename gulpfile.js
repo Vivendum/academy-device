@@ -4,6 +4,8 @@ var server = require("browser-sync").create();
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var rigger = require("gulp-rigger");
+var sass = require("gulp-sass"); sass.compiler = require("node-sass");
+var sourcemaps = require("gulp-sourcemaps");
 var cache = require("gulp-cache");
 var imagemin = require("gulp-imagemin");
 var pngquant = require("imagemin-pngquant");
@@ -14,6 +16,19 @@ gulp.task("build-html", function() {
     .pipe(rigger())
     .pipe(gulp.dest("build/before"))
     .pipe(gulp.dest("build/after"))
+    .pipe(server.stream());
+});
+
+gulp.task("build-css", function() {
+   return gulp.src("source/style/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: "expanded"
+    }))
+    .pipe(gulp.dest("build/before/style/"))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("build/after/style/"))
     .pipe(server.stream());
 });
 
@@ -57,8 +72,9 @@ gulp.task("server", function () {
 
   gulp.watch("source/image/*.{jpg,png,svg}", gulp.series("image-optimization"));
   gulp.watch("source/template/**/*.html", gulp.series("build-html"));
+  gulp.watch("source/style/**/*.scss", gulp.series("build-css"));
   gulp.watch("build/after/*.html").on("change", server.reload);
 });
 
 gulp.task("build", gulp.series("build-html"));
-gulp.task("start", gulp.series("image-optimization", "build-html", "server"));
+gulp.task("start", gulp.series("image-optimization", "build-html", "build-css", "server"));
