@@ -35,6 +35,7 @@ gulp.task("build-css", function() {
 
 gulp.task("image-optimization", function() {
   return gulp.src("source/image/*.{jpg,png,svg}")
+    .pipe(changed("build/after/image/"))
     .pipe(cache(imagemin([
       imagemin.svgo({
         js2svg: {
