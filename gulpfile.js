@@ -7,6 +7,7 @@ var rigger = require("gulp-rigger");
 var sass = require("gulp-sass"); sass.compiler = require("node-sass");
 var sourcemaps = require("gulp-sourcemaps");
 var cache = require("gulp-cache");
+var changed = require("gulp-changed");
 var imagemin = require("gulp-imagemin");
 var pngquant = require("imagemin-pngquant");
 
@@ -59,6 +60,13 @@ gulp.task("image-optimization", function() {
     .pipe(gulp.dest("build/after/image/"));
 });
 
+gulp.task("copy", function(done) {
+  gulp.src("source/font/*.{ttf,woff,woff2}")
+    .pipe(changed("build/after/font/"))
+    .pipe(gulp.dest("build/after/font/"));
+  done();
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/after",
@@ -77,4 +85,4 @@ gulp.task("server", function () {
 });
 
 gulp.task("build", gulp.series("build-html"));
-gulp.task("start", gulp.series("image-optimization", "build-html", "build-css", "server"));
+gulp.task("start", gulp.series("image-optimization", "copy", "build-html", "build-css", "server"));
