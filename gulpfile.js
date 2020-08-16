@@ -2,9 +2,11 @@
 
 var server = require("browser-sync").create();
 var gulp = require("gulp");
+var postcss = require("gulp-postcss");
 var plumber = require("gulp-plumber");
 var rigger = require("gulp-rigger");
 var sass = require("gulp-sass"); sass.compiler = require("node-sass");
+var autoprefixer = require("autoprefixer");
 var sourcemaps = require("gulp-sourcemaps");
 var cache = require("gulp-cache");
 var changed = require("gulp-changed");
@@ -27,6 +29,9 @@ gulp.task("build-css", function() {
     .pipe(sass({
       outputStyle: "expanded"
     }))
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(gulp.dest("build/before/style/"))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("build/after/style/"))

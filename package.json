@@ -19,7 +19,9 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.12",
+    "autoprefixer": "^9.8.6",
     "gulp": "4.0.x",
+    "gulp-postcss": "8.0.x",
     "gulp-cache": "1.1.x",
     "gulp-imagemin": "7.1.x",
     "gulp-plumber": "1.2.x",
