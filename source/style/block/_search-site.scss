@@ -1,0 +1,12 @@
+.search-site__input {
+  background-color: #f7e296;
+}
+
+.search-site__input::placeholder {
+  font-weight: 300;
+  font-size: 15px;
+  // line-height: 30px; убивает высоту строки в FireFox
+  font-family: "Open Sans";
+  letter-spacing: 0.01em;
+  color: #606060;
+}
