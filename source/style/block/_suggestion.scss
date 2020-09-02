@@ -1,0 +1,54 @@
+.suggestion {
+  background-color: transparent;
+}
+.suggestion__list {
+  list-style: none;
+}
+
+.suggestion__lead-product {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 56px;
+  font-family: "Gilroy";
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.suggestion__lead-product--cry {
+  font-weight: 800;
+}
+
+.suggestion__description-product {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: "Open Sans";
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.suggestion__table-property {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: "Open Sans";
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.suggestion__table-value {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Gilroy";
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.suggestion__table-abbreveature[title] {
+  text-decoration-line: none;
+}
+
+.suggestion__table-abbreveature:hover {
+  cursor: help;
+}
