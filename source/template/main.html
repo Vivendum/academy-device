@@ -111,20 +111,29 @@
     </section>
     <section class="services">
       <h2 class="visually-hidden">Услуги</h2>
-      <ul class="services__list">
-        <li class="services__item">
-          <h3 class="services__subtitle">Доставка</h3>
-          <p class="services__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+      <ul class="services__list" role="tablist">
+        <li class="services__item" role="presentation">
+          <a class="services__link button" id="tab-service-delivery" role="tab" href="#service-delivery">Доставка</a>
         </li>
-        <li class="services__item">
-          <h3 class="services__subtitle">Гарантия</h3>
-          <p class="services__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+        <li class="services__item" role="presentation">
+          <a class="services__link button" id="tab-service-guarantee" role="tab" href="#service-guarantee">Гарантия</a>
         </li>
-        <li class="services__item">
-          <h3 class="services__subtitle">Кредит</h3>
-          <p class="services__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        <li class="services__item" role="presentation">
+          <a class="services__link button" id="tab-service-credit" role="tab" href="#service-credit">Кредит</a>
         </li>
       </ul>
+      <div class="services__wrapper" id="service-delivery" role="tabpanel" aria-labelledby="tab-service-delivery">
+        <h3 class="services__subtitle">Доставка</h3>
+        <p class="services__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+      </div>
+      <div class="services__wrapper" id="service-guarantee" role="tabpanel" aria-labelledby="tab-service-guarantee">
+        <h3 class="services__subtitle">Гарантия</h3>
+        <p class="services__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+      </div>
+      <div class="services__wrapper" id="service-credit" role="tabpanel" aria-labelledby="tab-service-credit">
+        <h3 class="services__subtitle">Кредит</h3>
+        <p class="services__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+      </div>
     </section>
     <section class="partners">
       <h2 class="visually-hidden">Наши партнеры</h2>
