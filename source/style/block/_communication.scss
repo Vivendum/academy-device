@@ -1,0 +1,19 @@
+.communication__label {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy";
+  color: #000000;
+}
+
+.communication__input {
+  background-color: #f2f2f2;
+}
+
+.communication__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Open Sans";
+  color: #b7b7b7;
+}
