@@ -1,12 +1,49 @@
+.search-site {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: "Open Sans";
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
 .search-site__input {
-  background-color: #f7e296;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: "Open Sans";
+  letter-spacing: 0.01em;
+  color: #000000;
+
+  background-color: #f8e297;
 }
 
 .search-site__input::placeholder {
+  color: #b3b3b3;
+}
+
+.search-site__input:hover::placeholder {
+  color: #666666;
+}
+
+.search-site__button {
   font-weight: 300;
   font-size: 15px;
-  // line-height: 30px; убивает высоту строки в FireFox
+  line-height: 30px;
   font-family: "Open Sans";
   letter-spacing: 0.01em;
-  color: #606060;
+  color: #000000;
+
+  background-color: #f8e297;
+}
+
+.search-site__button:hover {
+  color: #ffffff;
+
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.search-site__button:active {
+  color: #b3b3b3;
 }
