@@ -4,11 +4,76 @@
   line-height: 30px;
   font-family: "Open Sans";
   letter-spacing: 0.01em;
-  color: #000000;
 
-  background-color: #f7e296;
   list-style: none;
 }
+
+.navigation-user--light {
+  background-color: #f8e297;
+}
+
+.navigation-user__item--light {
+  color: #000000;
+}
+
+.navigation-user__item--light:hover {
+  color: #666666;
+
+  cursor: pointer;
+}
+
+.navigation-user__item--light:active {
+  color: #b3b3b3;
+}
+
+.navigation-user__item--light-delay {
+  color: #b3b3b3;
+}
+
+.navigation-user__item--light-delay:hover {
+  color: #666666;
+
+  cursor: pointer;
+}
+
+.navigation-user__item--light-delay:active {
+  color: #000000;
+}
+
+.navigation-user--dark {
+  color: #ffffff;
+
+  background-color: #464646;
+}
+
+.navigation-user__item--dark {
+  opacity: 0.7;
+}
+
+.navigation-user__item--dark:hover {
+  opacity: 1;
+
+  cursor: pointer;
+}
+
+.navigation-user__item--dark:active {
+  opacity: 0.3;
+}
+
+.navigation-user__item--dark-delay {
+  opacity: 0.3;
+}
+
+.navigation-user__item--dark-delay:hover {
+  opacity: 1;
+
+  cursor: pointer;
+}
+
+.navigation-user__item--dark-delay:active {
+  opacity: 0.7;
+}
+
 .navigation-user__link {
   color: inherit;
 
