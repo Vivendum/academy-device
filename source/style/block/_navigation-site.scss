@@ -5,16 +5,20 @@
   font-family: "Gilroy";
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #000000;
 
-  background-color: #f7e296;
   list-style: none;
 }
 
-.navigation-site__link {
-  color: inherit;
+.navigation-site--light {
+  color: #000000;
 
-  text-decoration-line: none;
+  background-color: #f8e297;
+}
+
+.navigation-site--dark {
+  color: #ffffff;
+
+  background-color: #464646;
 }
 
 .navigation-site__catalog-list {
@@ -26,11 +30,29 @@
   letter-spacing: 0.01em;
   color: #000000;
 
+  background-color: #f8e297;
   list-style: none;
 }
 
-.navigation-site__catalog-link {
+.navigation-site__link {
   color: inherit;
+
+  text-decoration-line: none;
+}
+
+.navigation-site__link:hover {
+  opacity: 0.6;
+
+  cursor: pointer;
+}
+
+.navigation-site__link:active {
+  opacity: 0.3;
+}
+
+.navigation-site__link--current {
+  color: inherit;
+  opacity: 0.3;
 
   text-decoration-line: none;
 }
