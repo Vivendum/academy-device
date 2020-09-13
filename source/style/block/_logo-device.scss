@@ -5,12 +5,24 @@
   font-family: "Gilroy";
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: #000000;
 
   background-color: transparent;
 }
 
-.logo-device--other {
-  line-height: 1.2;
+.logo-device--light {
+  color: #000000;
+}
+
+.logo-device--dark {
   color: #ffc600;
+}
+
+.logo-device[href]:hover {
+  opacity: 0.6;
+
+  cursor: pointer;
+}
+
+.logo-device[href]:active {
+  opacity: 0.3;
 }
