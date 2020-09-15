@@ -17,3 +17,13 @@
 .button:active {
   opacity: 0.3;
 }
+
+.button--active {
+  color: #f7e184;
+
+  background-color: #000000;
+}
+
+.button--active:active {
+  opacity: 1;
+}
