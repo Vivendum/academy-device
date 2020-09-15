@@ -9,3 +9,11 @@
 
   text-decoration-line: none;
 }
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  opacity: 0.3;
+}
