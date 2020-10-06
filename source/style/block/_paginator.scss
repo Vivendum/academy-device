@@ -1,0 +1,53 @@
+.paginator {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Gilroy";
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000000;
+
+  background-color: #ededed;
+  list-style: none;
+}
+
+.paginator__button {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+
+  background-color: #ededed;
+}
+
+.paginator__button:not([disabled]):hover {
+  background-color: #dcdcdc;
+}
+
+.paginator__button:not([disabled]):active {
+  color: #999999;
+}
+
+.paginator__link {
+  color: inherit;
+  opacity: 0.3;
+
+  text-decoration-line: none;
+}
+
+.paginator__link:hover {
+  opacity: 0.6;
+}
+
+.paginator__link:active {
+  opacity: 1;
+}
+
+.paginator__link-current {
+  color: inherit;
+
+  text-decoration-line: none;
+}
