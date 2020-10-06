@@ -6,14 +6,27 @@
   color: #000000;
 }
 
-.communication__input {
-  background-color: #f2f2f2;
-}
-
 .communication__input::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   font-family: "Open Sans";
   color: #b7b7b7;
+}
+
+.communication__input {
+  background-color: #f2f2f2;
+}
+
+.communication__input:hover {
+  background-color: #eaeaea;
+}
+
+.communication__input:focus {
+  background-color: #ffffff;
+}
+
+.communication__input:invalid {
+  box-shadow: none;
+  background-color: #edb5b5;
 }
