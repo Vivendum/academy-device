@@ -10,3 +10,7 @@
   letter-spacing: 0.01em;
   color: #000000;
 }
+
+.filter-bluetooth__input[disabled] ~ .filter-bluetooth__description {
+  color: #a6a6a6;
+}
