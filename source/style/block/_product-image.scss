@@ -1,0 +1,17 @@
+.product-image__button-compare {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: "Open Sans";
+  letter-spacing: 0.01em;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.product-image__button-compare:hover {
+  opacity: 1;
+}
+
+.product-image__button-compare:active {
+  opacity: 0.2;
+}
