@@ -1,0 +1,30 @@
+.sorting-group {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Open Sans";
+  color: #000000;
+
+  list-style: none;
+}
+
+.sorting-group__link {
+  color: inherit;
+  opacity: 0.3;
+
+  text-decoration-line: none;
+}
+
+.sorting-group__link:hover {
+  opacity: 0.6;
+}
+
+.sorting-group__link:active {
+  opacity: 1;
+}
+
+.sorting-group__link-current {
+  color: inherit;
+
+  text-decoration-line: none;
+}
