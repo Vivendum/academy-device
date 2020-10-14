@@ -39,7 +39,7 @@ gulp.task("build-css", function() {
 });
 
 gulp.task("image-optimization", function() {
-  return gulp.src("source/image/*.{jpg,png,svg}")
+  return gulp.src("source/image/**/*.{jpg,png,svg}")
     .pipe(changed("build/after/image/"))
     .pipe(cache(imagemin([
       imagemin.svgo({
@@ -84,7 +84,7 @@ gulp.task("server", function () {
     browser: "firefox"
   });
 
-  gulp.watch("source/image/*.{jpg,png,svg}", gulp.series("image-optimization"));
+  gulp.watch("source/image/**/*.{jpg,png,svg}", gulp.series("image-optimization"));
   gulp.watch("source/template/**/*.html", gulp.series("build-html"));
   gulp.watch("source/style/**/*.scss", gulp.series("build-css"));
   gulp.watch("build/after/*.html").on("change", server.reload);
