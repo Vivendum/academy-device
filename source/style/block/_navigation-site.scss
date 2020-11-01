@@ -32,6 +32,14 @@
   list-style: none;
 }
 
+.navigation-site__catalog-list {
+  display: none;
+}
+
+.navigation-site__item:hover .navigation-site__catalog-list {
+  display: block;
+}
+
 .navigation-site__link {
   color: inherit;
 

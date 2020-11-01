@@ -1,4 +1,4 @@
-<header class="page-header">
+<header class="page__header page-header">
   <nav class="navigation-main">
     <a class="navigation-main__logo-device logo-device logo-device--light" href="main.html">Device</a>
     <form class="navigation-main__form" name="search" method="get" action="https://echo.htmlacademy.ru">
@@ -8,22 +8,24 @@
         <button class="search-site__button" type="submit">Найти</button>
       </p>
     </form>
-    <ul class="navigation-main__list navigation-user navigation-user--light">
-      <li class="navigation-user__item">
-        <a class="navigation-user__link navigation-user__link--light" href="#">Валентин Петухов</a>
-      </li>
-      <li class="navigation-user__item">
-        <a class="navigation-user__link navigation-user__link--light-delay" href="#">Выйти</a>
-      </li>
-    </ul>
-    <ul class="navigation-main__list navigation-buy navigation-buy--light">
-      <li class="navigation-buy__item">
-        <a class="navigation-buy__link navigation-buy__link--light" href="#">Сравнить</a>
-      </li>
-      <li class="navigation-buy__item">
-        <a class="navigation-buy__link navigation-buy__link--light" href="#">Корзина</a>
-      </li>
-    </ul>
+    <div class="navigation-main__wrapper-lists">
+      <ul class="navigation-main__list navigation-user navigation-user--light">
+        <li class="navigation-user__item">
+          <a class="navigation-user__link navigation-user__link--light" href="#">Валентин Петухов</a>
+        </li>
+        <li class="navigation-user__item">
+          <a class="navigation-user__link navigation-user__link--light-delay" href="#">Выйти</a>
+        </li>
+      </ul>
+      <ul class="navigation-main__list navigation-buy navigation-buy--light">
+        <li class="navigation-buy__item">
+          <a class="navigation-buy__link navigation-buy__link--light" href="#">Сравнить</a>
+        </li>
+        <li class="navigation-buy__item">
+          <a class="navigation-buy__link navigation-buy__link--light" href="#">Корзина</a>
+        </li>
+      </ul>
+    </div>
     <ul class="navigation-main__list navigation-site navigation-site--light">
       <li class="navigation-site__item">
         <a class="navigation-site__link" href="catalog.html">Каталог товаров</a>

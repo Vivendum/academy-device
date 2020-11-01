@@ -1,0 +1,10 @@
+.navigation-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.navigation-main__logo-device {
+  position: absolute;
+  top: 16px;
+}
