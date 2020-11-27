@@ -1,0 +1,32 @@
+body > *,
+body > * > *,
+body > * > * > *,
+body > * > * > * > *,
+body > * > * > * > * > * {
+  position: relative;
+}
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+body > * > * > * {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+body > * > * > * > * {
+  background: rgba(0, 0, 255, 0.2);
+  box-shadow: inset 0 0 0 2px blue;
+}
+
+body > * > * > * > * > * {
+  background: rgba(128, 0, 128, 0.2);
+  box-shadow: inset 0 0 0 2px purple;
+}
