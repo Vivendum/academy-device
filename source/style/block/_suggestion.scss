@@ -1,9 +1,36 @@
 .suggestion {
+  width: 1060px;
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-right: 75px;
+  padding-left: 25px;
+
   background-color: transparent;
 }
 
 .suggestion__list {
+  margin: 0;
+
   list-style: none;
+}
+
+.suggestion__item {
+  position: relative;
+  min-height: 486px;
+  margin-left: 510px;
+
+  display: none;
+}
+
+.suggestion__item:first-child {
+  display: block;
+}
+
+.suggestion__image {
+  position: absolute;
+  top: 0;
+  top: -90px;
+  left: -510px;
 }
 
 .suggestion__description-product {
